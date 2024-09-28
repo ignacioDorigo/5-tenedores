@@ -15,6 +15,7 @@ import { AccountStack } from './AccountStack';
 
 
 export function AppNavigation() {
+    
 
     // Es la funcion para crear lo que tenga que ver con el nav inferior (tanto el contenedor, como las screen)
     const Tab = createBottomTabNavigator();
