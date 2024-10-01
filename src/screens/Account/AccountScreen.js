@@ -33,7 +33,7 @@ export function AccountScreen() {
 
   // El loading modal va a mostrarse solo cuando la peticion asincronica este en proceso
   if (hasLogged === null) {
-    return (<LoadingModal show={true}  text='Cargando'/>);
+    return (<LoadingModal show={true} text='Cargando' />);
   }
 
   return (

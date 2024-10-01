@@ -6,7 +6,7 @@ import { screen } from '../utils'
 
 // Screens
 import { RestaurantsScreen } from '../screens/Restaurants/RestaurantsScreen'
-import { AddCollection } from '../screens/Restaurants/AddCollection'
+import { AddRestaurant } from '../screens/Restaurants/AddRestaurant'
 
 
 export function RestaurantsStack() {
@@ -16,7 +16,7 @@ export function RestaurantsStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen name={screen.restaurants.restaurants} component={RestaurantsScreen} />
-            <Stack.Screen name={screen.restaurants.addCollection} component={AddCollection} />
+            <Stack.Screen name={screen.restaurants.addRestaurant} component={AddRestaurant} />
         </Stack.Navigator>
     )
 }

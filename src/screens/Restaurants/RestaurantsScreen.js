@@ -9,7 +9,7 @@ export function RestaurantsScreen() {
   const navigation = useNavigation();
 
   const goToAddRestaurant = () => {
-    navigation.navigate(screen.restaurants.addCollection);
+    navigation.navigate(screen.restaurants.addRestaurant);
   }
 
   return (

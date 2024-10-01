@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-export function AddCollection() {
+export function AddRestaurant() {
   return (
     <View>
-      <Text>AddCollection</Text>
+      <Text>Añadir Restaurante</Text>
     </View>
   )
 }

@@ -3,15 +3,18 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { initFirebase } from './src/utils'
 import { LogBox } from 'react-native';
+import Toast from 'react-native-toast-message';
 
 LogBox.ignoreAllLogs();
 
 export default function App() {
-  return (
+  return (<>
     <NavigationContainer>
       <AppNavigation />
     </NavigationContainer>
-
+    
+    <Toast></Toast>
+  </>
   );
 }
 
