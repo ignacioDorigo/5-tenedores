@@ -1,22 +1,38 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { Button } from "@rneui/base";
-import { getAuth, signOut } from "firebase/auth";
+import React, { useState } from "react";
+import { View } from "react-native";
+import { Button, Text } from "@rneui/base";
+import { InfoUser } from "../../../components/Account/InfoUser";
 import { styles } from "./UserLoggedScreen.styles";
-import { InfoUser } from "../../../components/Account";
+import { getAuth, signOut } from "firebase/auth";
+import { LoadingModal } from "../../../components/Shared/LoadingModal";
+import { AccountOption } from "../../../components/Account";
 
 export function UserLoggedScreen() {
-  const cerrarSesion = async () => {
+  const [loading, setLoading] = useState(false);
+  const [loadingText, setLoadingText] = useState("");
+
+  const logOut = async () => {
     try {
       const auth = getAuth();
       await signOut(auth);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
-    <View style={styles.content}>
-      <InfoUser />
-      <Button title="Cerrar Sesión" onPress={cerrarSesion} />
+    <View>
+      <InfoUser setLoading={setLoading} setLoadingText={setLoadingText} />
+
+      <AccountOption />
+
+      <Button
+        title="Cerrar Sesión"
+        buttonStyle={styles.btnStyle}
+        titleStyle={styles.title}
+        onPress={logOut}
+      />
+      <LoadingModal show={loading} text={loadingText} />
     </View>
   );
 }
