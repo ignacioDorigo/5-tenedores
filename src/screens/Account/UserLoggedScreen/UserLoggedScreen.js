@@ -10,6 +10,12 @@ import { AccountOption } from "../../../components/Account";
 export function UserLoggedScreen() {
   const [loading, setLoading] = useState(false);
   const [loadingText, setLoadingText] = useState("");
+  const [_, setReload] = useState(false);
+
+  // Se usa para forzar una recarga de un componente
+  const onReload = () => {
+    setReload((prevState) => !prevState);
+  };
 
   const logOut = async () => {
     try {
@@ -24,7 +30,7 @@ export function UserLoggedScreen() {
     <View>
       <InfoUser setLoading={setLoading} setLoadingText={setLoadingText} />
 
-      <AccountOption />
+      <AccountOption onReload={onReload} />
 
       <Button
         title="Cerrar Sesión"
