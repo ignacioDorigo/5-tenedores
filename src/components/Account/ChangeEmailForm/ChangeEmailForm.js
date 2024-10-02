@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Button, Input } from "@rneui/base";
+import { Button, Input,Icon } from "@rneui/base";
 import { useFormik } from "formik";
 import Toast from "react-native-toast-message";
 import {
@@ -78,12 +78,14 @@ export function ChangeEmailForm(props) {
         autoCapitalize="none"
         errorMessage={formik.errors.email}
         onChangeText={(text) => formik.setFieldValue("email", text)}
+        rightIcon={<Icon type="material-community" name="email-outline" color="#C1C1C1"/>}
       />
       <Input
         placeholder="Contraseña actual"
         secureTextEntry={true}
         errorMessage={formik.errors.passwordActual}
         onChangeText={(text) => formik.setFieldValue("passwordActual", text)}
+        rightIcon={<Icon type="material-community" name="lock-outline" color="#C1C1C1"/>}
       />
       <Button
         title="Cambiar email"
