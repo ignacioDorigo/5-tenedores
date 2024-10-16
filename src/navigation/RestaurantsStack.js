@@ -1,10 +1,21 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function RestaurantsStack() {
+// Fichero nombre screens
+import { screen } from "../utils";
+
+// Pantallas
+import { RestaurantsScreen } from "../screens/Restaurants/RestaurantsScreen";
+
+export function RestaurantsStack() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View>
-      <Text>RestaurantsStack</Text>
-    </View>
-  )
+    <Stack.Navigator initialRouteName={screen.restaurants.restaurants}>
+      <Stack.Screen
+        name={screen.restaurants.restaurants}
+        component={RestaurantsScreen}
+        options={{ title: "Restaurants" }}
+      />
+    </Stack.Navigator>
+  );
 }

@@ -1,10 +1,10 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { View, Text } from "react-native";
 
-export default function SearchScreen() {
+export function SearchScreen() {
   return (
     <View>
       <Text>SearchScreen</Text>
     </View>
-  )
+  );
 }

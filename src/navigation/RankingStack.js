@@ -1,10 +1,21 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function RankingStack() {
+// Fichero nombre screens
+import { screen } from "../utils";
+
+// Pantallas
+import { RankingScreen } from "../screens/Ranking/RankingScreen";
+
+export function RankingStack() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View>
-      <Text>RankingStack</Text>
-    </View>
-  )
+    <Stack.Navigator initialRouteName={screen.ranking.ranking}>
+      <Stack.Screen
+        name={screen.ranking.ranking}
+        component={RankingScreen}
+        options={{ title: "Ranking" }}
+      />
+    </Stack.Navigator>
+  );
 }

@@ -1,10 +1,21 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function FavoritesStack() {
+// Fichero nombre screens
+import { screen } from "../utils";
+
+// Pantallas
+import { FavoritesScreen } from "../screens/Favorites/FavoritesScreen";
+
+export function FavoritesStack() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View>
-      <Text>FavoritesStack</Text>
-    </View>
-  )
+    <Stack.Navigator initialRouteName={screen.favorites.favorites}>
+      <Stack.Screen
+        name={screen.favorites.favorites}
+        component={FavoritesScreen}
+        options={{ title: "Favoritos" }}
+      />
+    </Stack.Navigator>
+  );
 }

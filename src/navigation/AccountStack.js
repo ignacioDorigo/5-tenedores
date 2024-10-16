@@ -1,10 +1,23 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function AccountStack() {
+// Fichero nombre screens
+import { screen } from "../utils";
+
+// Pantallas
+import { AccountScreen } from "../screens/Account/AccountScreen";
+
+export function AccountStack() {
+  
+  const Stack = createNativeStackNavigator();
+
   return (
-    <View>
-      <Text>AccountStack</Text>
-    </View>
-  )
+    <Stack.Navigator initialRouteName={screen.account.account}>
+      <Stack.Screen
+        name={screen.account.account}
+        component={AccountScreen}
+        options={{ title: "Cuenta" }}
+      />
+    </Stack.Navigator>
+  );
 }
