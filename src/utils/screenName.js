@@ -1,6 +1,7 @@
 const restaurantsStack = {
   tab: "RestaurantsTab",
   restaurants: "Restaurants",
+  addRestaurants: "AddRestaurant",
 };
 
 const favoritesStack = {
@@ -21,6 +22,8 @@ const searchStack = {
 const accountStack = {
   tab: "AccountTab",
   account: "Account",
+  login: "Login",
+  register: "Register",
 };
 
 export const screen = {
