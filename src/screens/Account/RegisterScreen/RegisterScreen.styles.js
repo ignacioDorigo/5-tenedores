@@ -10,13 +10,4 @@ export const styles = StyleSheet.create({
   content: {
     marginHorizontal: 40,
   },
-  viewRegister: {
-    marginTop: 20,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  click: {
-    fontWeight: "bold",
-  },
 });
