@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 export function AppNavigation() {
   return (
     <Tab.Navigator
-      initialRouteName={screen.restaurants.tab}
+      initialRouteName={screen.account.tab}
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarInactiveTintColor: "#646464",
