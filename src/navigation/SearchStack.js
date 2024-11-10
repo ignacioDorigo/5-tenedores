@@ -9,7 +9,11 @@ export function SearchStack() {
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator>
-      <Stack.Screen name={screen.search.search} component={SearchScreen} />
+      <Stack.Screen
+        name={screen.search.search}
+        component={SearchScreen}
+        options={{ title: "Buscar" }}
+      />
     </Stack.Navigator>
   );
 }
