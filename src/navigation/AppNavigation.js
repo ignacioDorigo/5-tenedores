@@ -1,10 +1,22 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { screen } from "../utils";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+// Creador del Bottom Tab.
+const Tab = createBottomTabNavigator();
+
+// Stacks
+import { AccountStack } from "./AccountStack";
+import {FavoritesStack} from './FavoritesStack';
 
 export default function AppNavigation() {
   return (
-    <View>
-      <Text>AppNavigation</Text>
-    </View>
+    <Tab.Navigator screenOptions={{}}>
+      <Tab.Screen name={screen.account.accountTab} component={AccountStack} />
+      <Tab.Screen name={screen.favorites.favoritesTab} component={FavoritesStack} />
+      {/* <Tab.Screen name={screen.ranking.rankingTab} component={} />
+      <Tab.Screen name={screen.restaurants.restaurantsTab} component={} />
+      <Tab.Screen name={screen.search.searchTab} component={} /> */}
+    </Tab.Navigator>
   );
 }
