@@ -21,11 +21,13 @@ const searchStack = {
 const restaurantsStack = {
   restaurantsTab: "RestaurantsTab",
   restaurants: "Restaurants",
+  addRestaurant: "AddRestaurant",
 };
+
 export const screen = {
   account: accountStack,
   favorites: favoritesStack,
   restaurants: restaurantsStack,
   ranking: rankingStack,
   search: searchStack,
-}
+};
