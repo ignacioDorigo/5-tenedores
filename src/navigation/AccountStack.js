@@ -1,11 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
 import { screen } from "../utils";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+// Pantallas
+import { AccountScreen } from "../screens/AccountScreen";
+
+const Stack = createNativeStackNavigator();
 
 export function AccountStack() {
   return (
-    <View>
-      <Text>AccountStack</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name={screen.account.account} component={AccountScreen}/>
+    </Stack.Navigator>
   );
 }

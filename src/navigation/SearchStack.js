@@ -1,11 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
 import { screen } from "../utils";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+// Pantallas
+import { SearchScreen } from "../screens/SearchScreen";
+
+const Stack = createNativeStackNavigator();
 
 export function SearchStack() {
   return (
-    <View>
-      <Text>SearchStack</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name={screen.search.search} component={SearchScreen} />
+    </Stack.Navigator>
   );
 }
