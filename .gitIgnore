@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+src/utils/firebase2.js
+src/utils/firebase.js
+
 package-lock.json
 
 # Expo
@@ -35,3 +38,4 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
