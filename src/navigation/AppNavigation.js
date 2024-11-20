@@ -1,5 +1,6 @@
 import React from "react";
 import { screen } from "../utils";
+import { Icon } from "@rneui/themed";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // Pantallas
@@ -8,7 +9,6 @@ import { RankingStack } from "./RankingStack";
 import { FavoritesStack } from "./FavoritesStack";
 import { SearchStack } from "./SearchStack";
 import { AccountStack } from "./AccountStack";
-import { Icon } from "@rneui/themed";
 
 const Tab = createBottomTabNavigator();
 
@@ -55,7 +55,7 @@ export function AppNavigation() {
 
 function asignarIcono(route, focused, size, color) {
   let icono;
-  console.log(route.name);
+  // console.log("La pantalla actual es: " + route.name);
   if (route.name === screen.account.tab) {
     icono = focused ? "cog" : "cog-outline";
   }
