@@ -39,3 +39,4 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+src/utils/firebase.js

@@ -3,7 +3,7 @@ import { screen } from "../utils";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Pantallas
-import { AccountScreen } from "../screens/AccountScreen";
+import { AccountScreen } from "../screens/Account/AccountScreen";
 
 const Stack = createNativeStackNavigator();
 
