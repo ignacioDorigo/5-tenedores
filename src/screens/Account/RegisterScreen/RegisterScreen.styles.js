@@ -7,4 +7,8 @@ export const styles = StyleSheet.create({
     resizeMode: "contain",
     marginTop: 20,
   },
+  viewRegister: {
+    marginTop: 30,
+    marginHorizontal: 20,
+  },
 });

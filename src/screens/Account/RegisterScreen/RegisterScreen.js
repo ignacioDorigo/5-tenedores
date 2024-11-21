@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import { Image } from "@rneui/themed";
 import { styles } from "./RegisterScreen.styles";
+import { RegisterForm } from "../../../components/Auth";
 
 export function RegisterScreen() {
   return (
@@ -10,7 +11,10 @@ export function RegisterScreen() {
         source={require("../../../../assets/5-tenedores-letras-icono-logo.png")}
         style={styles.img}
       />
-      <Text>RegisterScreen</Text>
+
+      <View style={styles.viewRegister}>
+        <RegisterForm />
+      </View>
     </ScrollView>
   );
 }
