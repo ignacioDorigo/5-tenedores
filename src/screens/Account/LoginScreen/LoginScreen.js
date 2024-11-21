@@ -1,10 +1,14 @@
+import { Image } from "@rneui/themed";
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 
 export function LoginScreen() {
   return (
-    <View>
-      <Text>LoginScreen</Text>
-    </View>
+    <ScrollView>
+      <Image
+        source={require("../../../../assets/5-tenedores-letras-icono-logo.png")}
+        style={styles.img}
+      />
+    </ScrollView>
   );
 }

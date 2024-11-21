@@ -25,7 +25,7 @@ export function AccountStack() {
       <Stack.Screen
         name={screen.account.register}
         component={RegisterScreen}
-        options={{ title: "Register" }}
+        options={{ title: "Crea tu cuenta" }}
       />
     </Stack.Navigator>
   );
