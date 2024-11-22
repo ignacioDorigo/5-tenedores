@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  scrollView: {
-    gap: 30,
+  viewRegister: {
+    marginTop: 30,
+    marginHorizontal: 20,
   },
   img: {
     resizeMode: "contain",
@@ -12,6 +13,7 @@ export const styles = StyleSheet.create({
   },
 
   todavia: {
+    marginTop: 30,
     textAlign: "center",
   },
   clickAqui: {

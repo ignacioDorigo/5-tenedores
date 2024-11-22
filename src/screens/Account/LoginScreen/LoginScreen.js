@@ -4,6 +4,8 @@ import { View, Text, ScrollView } from "react-native";
 import { styles } from "./LoginScreen.styles";
 import { useNavigation } from "@react-navigation/native";
 import { screen } from "../../../utils";
+import { LoginForm } from "../../../components/Auth/LoginForm/LoginForm";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export function LoginScreen() {
   const navigation = useNavigation();
@@ -13,7 +15,7 @@ export function LoginScreen() {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollView}>
+    <KeyboardAwareScrollView>
       {/* Imagen de logo */}
       <Image
         source={require("../../../../assets/5-tenedores-letras-icono-logo.png")}
@@ -21,7 +23,9 @@ export function LoginScreen() {
       />
 
       {/* Login Form*/}
-      <Text>Estamos en el login</Text>
+      <View style={styles.viewRegister}>
+        <LoginForm />
+      </View>
 
       {/* Boton para registrarse */}
       <Text style={styles.todavia}>
@@ -30,6 +34,6 @@ export function LoginScreen() {
           Click aquí
         </Text>
       </Text>
-    </ScrollView>
+    </KeyboardAwareScrollView>
   );
 }
