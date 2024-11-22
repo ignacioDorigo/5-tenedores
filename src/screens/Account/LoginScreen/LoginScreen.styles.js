@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     resizeMode: "contain",
     height: 150,
     width: "100%",
-    marginTop: 20,
+    marginTop: 40,
   },
 
   todavia: {

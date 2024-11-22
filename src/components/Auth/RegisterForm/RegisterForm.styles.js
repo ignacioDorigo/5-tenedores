@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#00A680",
   },
   btnContainer: {
+    marginTop: 20,
     width: "100%",
   },
 });
