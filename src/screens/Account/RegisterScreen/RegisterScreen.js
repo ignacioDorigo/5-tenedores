@@ -3,10 +3,11 @@ import React from "react";
 import { Image } from "@rneui/themed";
 import { styles } from "./RegisterScreen.styles";
 import { RegisterForm } from "../../../components/Auth";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export function RegisterScreen() {
   return (
-    <ScrollView>
+    <KeyboardAwareScrollView>
       <Image
         source={require("../../../../assets/5-tenedores-letras-icono-logo.png")}
         style={styles.img}
@@ -15,6 +16,6 @@ export function RegisterScreen() {
       <View style={styles.viewRegister}>
         <RegisterForm />
       </View>
-    </ScrollView>
+    </KeyboardAwareScrollView>
   );
 }

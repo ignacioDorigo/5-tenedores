@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Alert } from "react-native";
 import { styles } from "./RegisterForm.styles";
 import { Button, Icon, Input } from "@rneui/themed";
 import { initialValues, validationSchema } from "./RegisterForm.data";
 import { useFormik } from "formik";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigation } from "@react-navigation/native";
+import { screen } from "../../../utils";
 
 export function RegisterForm() {
+  const navigation = useNavigation();
   const [mostrarPass, setMostrarPass] = useState(true);
   const [mostrarRepeat, setMostrarRepeat] = useState(true);
 
@@ -23,10 +27,23 @@ export function RegisterForm() {
     validateOnChange: false,
     onSubmit: async (formulario) => {
       try {
-        console.log("Formulario");
-        console.log(formulario);
+        const auth = getAuth();
+        const response = await createUserWithEmailAndPassword(
+          auth,
+          formulario.email,
+          formulario.password
+        );
+        Alert.alert("Éxito", "Registro exitoso", [
+          {
+            text: "Aceptar",
+            onPress: () => {
+              navigation.navigate(screen.account.account);
+            },
+            style: "default",
+          },
+        ]);
       } catch (error) {
-        console.log(error);
+        Alert.alert("Error", "Ha ocurrido un problema");
       }
     },
   });
